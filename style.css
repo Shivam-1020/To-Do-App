@@ -4,15 +4,27 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  /* height: 100vh; */
+  min-height: 100vh;
   background-color: antiquewhite;
+}
+@media (max-width: 500px) {
+  .addTask{
+    flex-direction: column;   /* input + button neeche */
+  }
+
+  button{
+    width: 100%;
+  }
 }
 .container{
   border: none;
   border-radius: 15px;
   background-color: rgb(156, 222, 252);
   height: auto;
-  width: 25vw;
+  /* width: 25vw; */
+  width: 90%;
+  max-width: 400px;
   box-shadow: 5px 6px 7px;
 }
 .header{
@@ -28,6 +40,8 @@ body{
   justify-content: space-evenly;
 }
 input{
+  flex: 1;    
+  /* flex 1 changed later */
   padding: 7px;
   border-radius: 5px;
 }
